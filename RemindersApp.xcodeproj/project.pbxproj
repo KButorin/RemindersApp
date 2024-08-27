@@ -31,6 +31,7 @@
 		1FA73E4A2C78E2C200C9FB49 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA73E492C78E2C200C9FB49 /* CustomOperators.swift */; };
 		1FA73E4C2C79F09A00C9FB49 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA73E4B2C79F09900C9FB49 /* SelectListView.swift */; };
 		1FA73E4E2C7A051B00C9FB49 /* Delay .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA73E4D2C7A051B00C9FB49 /* Delay .swift */; };
+		1FB86BF62C7DF6E30044D620 /* ReminderStatsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB86BF52C7DF6E30044D620 /* ReminderStatsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		1FA73E492C78E2C200C9FB49 /* CustomOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		1FA73E4B2C79F09900C9FB49 /* SelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListView.swift; sourceTree = "<group>"; };
 		1FA73E4D2C7A051B00C9FB49 /* Delay .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Delay .swift"; sourceTree = "<group>"; };
+		1FB86BF52C7DF6E30044D620 /* ReminderStatsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStatsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				1FA73E452C78E03700C9FB49 /* Configs */,
 				1FA73E232C7759B100C9FB49 /* MyList+CoreDataClass.swift */,
 				1FA73E242C7759B100C9FB49 /* MyList+CoreDataProperties.swift */,
+				1FB86BF52C7DF6E30044D620 /* ReminderStatsBuilder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				1FA73E112C77590300C9FB49 /* HomeView.swift in Sources */,
 				1FA73E4C2C79F09A00C9FB49 /* SelectListView.swift in Sources */,
 				1FA73E0F2C77590300C9FB49 /* RemindersAppApp.swift in Sources */,
+				1FB86BF62C7DF6E30044D620 /* ReminderStatsBuilder.swift in Sources */,
 				1FA73E352C777B1600C9FB49 /* MyListView.swift in Sources */,
 				1FA73E4E2C7A051B00C9FB49 /* Delay .swift in Sources */,
 				1FA73E3D2C78A6CC00C9FB49 /* ReminderListView.swift in Sources */,
