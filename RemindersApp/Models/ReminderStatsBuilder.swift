@@ -8,6 +8,14 @@
 import Foundation
 import SwiftUI
 
+enum ReminderStatType {
+    case today
+    case all
+    case scheduled
+    case completed
+}
+
+
 struct ReminderStatsValues {
     var todayCount: Int = 0
     var scheduleCount: Int = 0
@@ -44,13 +52,13 @@ struct ReminderStatsBuilder {
     
     private func calculateCompletedCount(reminders: [Reminder]) -> Int {
         return reminders.reduce(0){ result, reminder in
-            return reminder.isCompleted ? +1 : result
+            return reminder.isCompleted ? result+1 : result
         }
     }
     
     private func calculateAllCount(reminders: [Reminder]) -> Int {
         return reminders.reduce(0) { result, reminder in
-            return reminder.isCompleted ? result+1 : result
+            return !reminder.isCompleted ? result+1 : result
         }
     }
     
