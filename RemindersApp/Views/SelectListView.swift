@@ -13,24 +13,37 @@ struct SelectListView: View {
     private var myListsFetchResults: FetchedResults<MyList>
     @Binding var selectedList: MyList?
     
-    var body: some View {
-        List(myListsFetchResults) { myList in
-            HStack {
-                HStack{
-                    Image(systemName: "line.3.horizontal.circle.fill")
-                        .foregroundStyle(Color(myList.color))
-                    Text(myList.name)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    self.selectedList = myList
-                }
-                Spacer()
-                if selectedList == myList {
-                    Image(systemName: "checkmark")
-                }
+    private func deleteList(_ indexSet: IndexSet){
+        indexSet.forEach { index in
+            let list = myListsFetchResults[index]
+            do {
+                try ReminderServices.deleteList(list)
+            } catch {
+                print(error.localizedDescription)
             }
+        }
+    }
+    
+    var body: some View {
+        List{
+            ForEach(myListsFetchResults) { myList in
+                HStack {
+                    HStack{
+                        Image(systemName: "line.3.horizontal.circle.fill")
+                            .foregroundStyle(Color(myList.color))
+                        Text(myList.name)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        self.selectedList = myList
+                    }
+                    Spacer()
+                    if selectedList == myList {
+                        Image(systemName: "checkmark")
+                    }
+                }
+            }.onDelete(perform: deleteList)
         }
     }
 }

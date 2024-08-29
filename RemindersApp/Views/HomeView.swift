@@ -56,7 +56,7 @@ struct HomeView: View {
                             NavigationLink {
                                 ReminderListView(reminders: completedResults)
                             } label: {
-                                ReminderStatsView(icon: "checkmark.circle.fill", title: "Completed", count: reminderStatsValues.completedCount, iconColor: .black)
+                                ReminderStatsView(icon: "checkmark.circle.fill", title: "Completed", count: reminderStatsValues.completedCount, iconColor: .primary)
                             }
                         }
                         
@@ -67,9 +67,6 @@ struct HomeView: View {
                             .padding()
                         
                     MyListView(myLists: myListResults)
-                    
-                    
-                    
                     Button {
                         isPresented = true
                     } label: {

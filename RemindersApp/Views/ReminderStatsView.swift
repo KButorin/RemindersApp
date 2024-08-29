@@ -14,6 +14,8 @@ struct ReminderStatsView: View {
     var count: Int?
     var iconColor: Color = .blue
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack {
             HStack {
@@ -32,9 +34,8 @@ struct ReminderStatsView: View {
                 
             }.padding()
                 .frame(maxWidth: .infinity)
-                .background(.gray)
-                .cornerRadius(10)
-                .foregroundColor(.white)
+                .background(colorScheme == .dark ? Color.darkGray : .offWhite)
+                .foregroundColor(colorScheme == .dark ? Color.offWhite : .darkGray)
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
     }

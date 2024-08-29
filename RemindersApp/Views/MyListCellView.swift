@@ -14,7 +14,7 @@ struct MyListCellView: View {
     var body: some View {
         HStack {
             Image(systemName: "line.3.horizontal.circle.fill")
-                .foregroundStyle(Color(myList.color ?? .clear))
+                .foregroundStyle(Color(myList.color))
             Text(myList.name)
             Spacer()
             Image(systemName: "chevron.right")

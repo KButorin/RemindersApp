@@ -10,6 +10,7 @@ import SwiftUI
 struct MyListView: View {
     
     let myLists: FetchedResults<MyList>
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
@@ -26,6 +27,7 @@ struct MyListView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding([.leading], 10)
                                 .font(.title3)
+                                .foregroundColor(colorScheme == .dark ? Color.offWhite : .darkGray)
                             Divider()
                         }
                     }
